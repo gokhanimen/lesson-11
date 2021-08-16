@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d68c45;
+    & .shoes-area{
+        display: flex;
+        gap: 20px;
+        & .wrapper{
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 4px 8px 10px rgba(0, 0, 0, .3);
+            & .shoe{
+                position: absolute;
+                top: 40px;
+                height: 130px;
+                width: 250px;
+                object-fit: cover;
+                transition: ease-in-out 300ms;
+                z-index: 9999;
+                margin-bottom: 10px;
+            }
+            &:hover{
+                & .shoe{
+                    top: -70px;
+                    transform: rotate(-25deg);
+                }
+                & .content{
+                    margin-bottom: -80px;
+                    transform: translateY(0px);
+                    & .buy{
+                        display: flex;
+                        transform: translateY(0px);
+                    }
+                }
+            }
+        }
+        & .card{
+            position: relative;
+            height: 300px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #2A2D43;
+            border-radius: 15px;
+            padding: 20px;
+            cursor: pointer;
+            overflow: hidden;
+            &:hover{
+                & .content{
+                    margin-bottom: -80px;
+                    transform: translateY(0px);
+                    & .buy{
+                        display: flex;
+                        transform: translateY(0px);
+                    }
+                }
+            }
+
+            & .content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-family:Arial, Helvetica, 
+                sans-serif;
+                margin-bottom: -240px;
+                transition: ease-in-out 300ms;
+                transform: translateY(30px);
+                & .shoe-title{
+                    margin-bottom: 10px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: orange;
+                }
+                & .shoe-price{
+                    margin-bottom: 30px;
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: #fff;
+                }
+                & .buy{
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    transition: ease-in-out 300ms;
+                    transform: translateY(10px);
+                    &-desc{
+                        color: #fff;
+                        font-size: 14px;
+                        font-weight: 400;
+                        margin-bottom: 10px;
+                        text-align: center;
+                    }
+                    &-btn{
+                        height: 50px;
+                        width: 100%;
+                        min-width: 200px;
+                        background-color: #00bbf9;
+                        color: #fff;
+                        border: none;
+                        border-radius:10px;
+                        font-weight: 600;
+                        font-size: 14px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
